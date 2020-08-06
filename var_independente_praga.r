@@ -16,7 +16,7 @@ len <- length(value)
 
 z <- gl(n,k,len,labels = c("svm","dt", "rf", "rl", "nv"))
 
-w <- pairwise.t.test(value, z, exact = FALSE)
+w <- pairwise.wilcox.test(value, z, exact = FALSE)
 p_values <- w$p.value
 
 print(p_values)

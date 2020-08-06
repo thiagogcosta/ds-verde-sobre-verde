@@ -11,26 +11,20 @@ dt <- file$y_dt
 nb <- file$y_nb
 rl <- file$y_rl
 
-rf_norm <- rnorm(rf)
-svm_norm <- rnorm(svm)
-dt_norm <- rnorm(dt)
-nb_norm <- rnorm(nv)
-rl_norm <- rnorm(rl)
-
-ad_nb <- ad.test(rf_norm)
+ad_nb <- shapiro.test(rf)
 nb_p <- ad_nb$p.value
 
-ad_svm <- ad.test(svm_norm)
+ad_svm <- shapiro.test(svm)
 svm_p <- ad_svm$p.value 
 
-ad_dt <- ad.test(dt_norm)
+ad_dt <- shapiro.test(dt)
 dt_p <- ad_dt$p.value
 
-ad_rf <- ad.test(nv_norm)
-rf_p <- ad_rf$p.value
+ad_rf <- shapiro.test(nb)
+rf_p <- ad_rf$p.val
 
-ad_rl <- ad.test(rl_norm)
-rl_p <- ad_rl$p.value
+ad_rl <- shapiro.test(rl)
+rl_p <- ad_rl$p.val
 
 ksframe <- data.frame('svm' = svm_p, 'rl' = rl_p, 'rf' = rf_p, 'dt' = dt_p, 'nv' = nv_p)
 
