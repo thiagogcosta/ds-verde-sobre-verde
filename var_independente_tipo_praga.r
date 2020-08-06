@@ -1,6 +1,6 @@
 #Calcular o teste de Wilcoxon:
   
-file <- read.csv('df_valores_preditos_tipo_praga.csv', header=TRUE, sep=',', stringsAsFactors=FALSE)
+file <- read.csv('data/df_valores_preditos_tipo_praga.csv', header=TRUE, sep=',', stringsAsFactors=FALSE)
 
 rf <- file$y_rf
 svm <- file$y_svm
@@ -16,8 +16,8 @@ len <- length(value)
 
 z <- gl(n,k,len,labels = c("svm","dt", "rf", "rl", "nv"))
 
-w <- pairwise.friedman.test(value, z, exact = FALSE)
+w <- pairwise.wilcox.test(value, z, exact = FALSE)
 p_values <- w$p.value
 
 print(p_values)
-write.csv(p_values,file='t-test-tipo-praga.csv')
+write.csv(p_values,file='data/t-test-tipo-praga.csv')

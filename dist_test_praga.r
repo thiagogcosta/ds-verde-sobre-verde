@@ -3,7 +3,7 @@ library(dgof)
 install.packages("nortest")
 library(nortest)
 
-file <- read.csv('df_valores_preditos_praga.csv', header=TRUE, sep=',', stringsAsFactors=FALSE)
+file <- read.csv('data/df_valores_preditos_praga.csv', header=TRUE, sep=',', stringsAsFactors=FALSE)
 
 rf <- file$y_rf
 svm <- file$y_svm
@@ -30,4 +30,4 @@ ksframe <- data.frame('svm' = svm_p, 'rl' = rl_p, 'rf' = rf_p, 'dt' = dt_p, 'nv'
 
 print(ksframe)
 
-write.csv(ksframe,file='anderson_darling-test-praga.csv')
+write.csv(ksframe,file='data/shapiro-wilk-test-praga.csv')
