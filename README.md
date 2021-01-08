@@ -1,4 +1,4 @@
-# Teste 1 para Computer Scientist na Jacto Agrícola
+# Análise de dados e Criação de Modelos de Machine Learning para a Identificação de Pragas em Colheitas
 
 # Problema e Justificativas
 
