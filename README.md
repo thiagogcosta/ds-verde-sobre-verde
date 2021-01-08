@@ -1,4 +1,4 @@
-# Análise de dados e Criação de Modelos de Machine Learning para a Identificação de Pragas em Colheitas
+# Modelo de Aprendizado de Máquina para a detecção de pragas em colheitas
 
 # Problema e Justificativas
 
